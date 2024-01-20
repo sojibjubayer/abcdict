@@ -5,7 +5,7 @@ import Navbar from "../pages/shared/navbar/Navbar";
 
 const Main = () => {
     return (
-        <div>
+        <div className="lg:w-[98%] mx-auto">
             <Navbar />
             <Outlet />
             <Footer />
