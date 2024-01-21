@@ -6,6 +6,8 @@ import Ab from "../pages/ab/Ab";
 import AbChapter2 from "../pages/ab/chapter2/AbChapter2";
 import Chapter2 from "../pages/chapterwise/chapter2/Chapter2";
 import Register from "../pages/register/Register";
+import Mcq from "../mcq/Mcq";
+import Writer from "../pages/writer/Writer";
 
 
 
@@ -35,6 +37,14 @@ export const router = createBrowserRouter([{
             {
                 path:'/register',
                 element:<Register></Register>
+            },
+            {
+                path:'/mcq',
+                element:<Mcq></Mcq>
+            },
+            {
+                path:'aboutWriter',
+                element:<Writer></Writer>
             }
         ]
     }

@@ -3,6 +3,10 @@ import navbarLogo from '../../../assets/navbarLogo.png'
 
 
 const Navbar = () => {
+    const isActive = true;
+
+
+
     return (
         <>
             <div className="navbar bg-black text-[#FF4A1A]">
@@ -24,10 +28,39 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
-                        <li><NavLink to='/'>হোম</NavLink></li>
-                        <li><NavLink to='/ab'>জ্ঞান ও অনুধাবন</NavLink></li>
-                        <li><a>বহুনির্বাচনী</a></li>
-                        <li><a>About writer</a></li>
+                        <li><NavLink
+                            to="/"
+                            style={({ isActive }) => {
+                                return isActive ? { color: "white",backgroundColor:'#FF4A1A' } : {};
+                            }}
+                        > অধ্যায় ভিত্তিক নোটস </NavLink></li>
+
+                        <li><NavLink
+                            to="/ab"
+                            style={({ isActive }) => {
+                                return isActive ? { color: "white",backgroundColor:'#FF4A1A' } : {};
+                            }}> জ্ঞান ও অনুধাবন  </NavLink></li>
+
+                        <li><NavLink
+                            to="/mcq"
+                            style={({ isActive }) => {
+                                return isActive ? { color: "white",backgroundColor:'#FF4A1A' } : {};
+                            }}> বহুনির্বাচনী </NavLink></li>
+
+                        <li><NavLink
+                            to="https://www.youtube.com/@abcdict" target="_blank"
+                            style={({ isActive }) => {
+                                return isActive ? { color: "blue",backgroundColor:'#FF4A1A' } : {};
+                            }}> ভিডিও ক্লাস  </NavLink></li>
+
+                        <li><NavLink
+                            to="/aboutWriter"
+                            style={({ isActive }) => {
+                                return isActive ? { color: "white",backgroundColor:'#FF4A1A' } : {};
+                            }}> লেখক সম্পর্কে </NavLink></li>
+                        
+                        
+                        
                     </ul>
                 </div>
                 <div className="navbar-end">
